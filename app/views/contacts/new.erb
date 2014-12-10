@@ -1,0 +1,74 @@
+<h1>New Contact</h1>
+
+<div class="errors">
+  <ul>
+    <% @contact.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+</div>
+
+<form action="/contacts" method="post">
+  <div class="row">
+    <div class="column column--4">
+      <label for="first-name">First name</label>
+      <input id="first-name" type="text" name="contact[first_name]"
+        value="<%= @contact.first_name %>">
+    </div>
+
+    <div class="column column--4">
+      <label for="last-name">Last name</label>
+      <input id="last-name" type="text" name="contact[last_name]"
+        value="<%= @contact.last_name %>">
+    </div>
+
+    <div class="column column--4">
+      <label for="company">Company</label>
+      <input id="company" type="text" name="contact[company]"
+        value="<%= @contact.company %>">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column column--6">
+      <label for="email">Email</label>
+      <input id="email" type="text" name="contact[email]"
+        value="<%= @contact.email %>">
+    </div>
+
+    <div class="column column--6">
+      <label for="phone">Phone</label>
+      <input id="phone" type="text" name="contact[phone]"
+        value="<%= @contact.phone %>">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column column--6">
+      <label for="city">City</label>
+      <input id="city" type="text" name="contact[city]"
+        value="<%= @contact.city %>">
+    </div>
+
+    <div class="column column--6">
+      <label for="state">State</label>
+      <input id="state" type="text" name="contact[state]"
+        value="<%= @contact.state %>">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column column--12">
+      <label for="notes">Notes</label>
+      <textarea id="notes" name="contact[notes]">
+        <%= @contact.notes %>
+      </textarea>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column column--12">
+      <input type="submit" value="Create">
+    </div>
+  </div>
+</form>

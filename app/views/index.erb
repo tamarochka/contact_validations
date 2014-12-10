@@ -1,0 +1,16 @@
+<h1>Contacts</h1>
+
+<a href="/contacts/new">Add a Contact</a>
+
+<ul class="contact-list">
+  <% @contacts.each do |contact| %>
+    <li class="contact">
+      <h3><%= contact.full_name %></h3>
+
+      <ul>
+        <li><%= contact.email %></li>
+        <li><%= contact.location %></li>
+      </ul>
+    </li>
+  <% end %>
+</ul>

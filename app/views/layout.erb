@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World</title>
+    <link rel="stylesheet" href="/stylesheets/normalize.css" />
+    <link rel="stylesheet" href="/stylesheets/app.css" />
+  </head>
+  <body>
+    <div class="row">
+      <div class="column column--12">
+        <% flash.each do |type, message| %>
+          <div class="flash flash--<%= type %>">
+            <p><%= message %></p>
+          </div>
+        <% end %>
+
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

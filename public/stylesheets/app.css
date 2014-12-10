@@ -1,0 +1,78 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 24px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input, textarea {
+  width: 100%;
+  border: 1px solid #BBBBBB;
+}
+
+textarea {
+  height: 5em;
+}
+
+/* Grid */
+
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+  max-width: 1024px;
+}
+
+.row .row {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+
+.row:after {
+  clear: both;
+}
+
+.column {
+  display: block;
+  float: left;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.column--2 { width: 16.6666666666666667% }
+.column--3 { width: 25% }
+.column--4 { width: 33.3333333333333333%; }
+.column--6 { width: 50%; }
+.column--12 { width: 100%; }
+
+/* General */
+
+.flash {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #BBBBBB;
+  padding: .5em 1em;
+  color: #BBBBBB;
+}
+
+.flash--error {
+  border-color: red;
+  color: red;
+}
+
+.flash--notice {
+  border-color: green;
+  color: green;
+}
